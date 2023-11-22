@@ -6,12 +6,15 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: linkerd
+    namespace: argocd
     server: https://kubernetes.default.svc
   source:
     chart: linkerd-crds
     repoURL: https://helm.linkerd.io/stable
     targetRevision: 1.8.0
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
-      - CreateNamespace=true
+    - CreateNamespace=true
