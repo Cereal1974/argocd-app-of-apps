@@ -12,10 +12,3 @@ spec:
     chart: linkerd-crds
     repoURL: https://helm.linkerd.io/stable
     targetRevision: 1.8.0
-  target:
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-      syncOptions:
-        - CreateNamespace=true
