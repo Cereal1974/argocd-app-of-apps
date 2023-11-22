@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - argo-rollouts
 - argocd
+- linkerd-crd
